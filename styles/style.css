@@ -90,7 +90,6 @@ body {
   background-color: #ffffff;
 }
 
-/* Animación de "corriente" */
 @keyframes vibrarIgor {
   0%   { transform: scaleY(1); opacity: 1; }
   50%  { transform: scaleY(1.05); opacity: 0.94; }
@@ -132,7 +131,7 @@ body {
   color: #666;
 }
 
-/* Carrusel de marcas */
+/* Carrusel por sets */
 .carousel-section {
   padding: 60px 20px;
   background-color: #f9fafb;
@@ -146,36 +145,33 @@ body {
   color: #111;
 }
 
-.carousel {
-  overflow: hidden;
+.carousel-sets {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
+  height: 80px;
 }
 
-.carousel-track {
+.logo-set {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.logo-set.visible {
   display: flex;
-  width: calc(100% * 8 / 3);
-  animation: slideCarousel 16s linear infinite;
 }
 
-.carousel-track img {
-  width: calc(100% / 3);
-  height: auto;
-  padding: 0 16px;
+.logo-set img {
+  height: 40px;
+  max-width: 80px;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.9;
-}
-
-@keyframes slideCarousel {
-  0% { transform: translateX(0); }
-  12.5% { transform: translateX(-100%); }
-  25% { transform: translateX(-200%); }
-  37.5% { transform: translateX(-300%); }
-  50% { transform: translateX(-400%); }
-  62.5% { transform: translateX(-500%); }
-  75% { transform: translateX(-600%); }
-  87.5% { transform: translateX(-700%); }
-  100% { transform: translateX(-800%); }
+  opacity: 0.8;
 }
