@@ -131,3 +131,51 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
+
+/* Carrusel de marcas */
+.carousel-section {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #111;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(100% * 8 / 3);
+  animation: slideCarousel 16s linear infinite;
+}
+
+.carousel-track img {
+  width: calc(100% / 3);
+  height: auto;
+  padding: 0 16px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.9;
+}
+
+@keyframes slideCarousel {
+  0% { transform: translateX(0); }
+  12.5% { transform: translateX(-100%); }
+  25% { transform: translateX(-200%); }
+  37.5% { transform: translateX(-300%); }
+  50% { transform: translateX(-400%); }
+  62.5% { transform: translateX(-500%); }
+  75% { transform: translateX(-600%); }
+  87.5% { transform: translateX(-700%); }
+  100% { transform: translateX(-800%); }
+}
