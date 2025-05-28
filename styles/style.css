@@ -24,14 +24,18 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  position: relative;
 }
 
 .logo {
   height: 40px;
 }
 
-/* Navegación central */
+/* Navegación central centrada */
 .middle-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 32px;
 }
