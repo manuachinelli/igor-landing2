@@ -31,19 +31,35 @@
 
     <section class="carousel-section">
       <h2 class="carousel-title">Confían en Igor</h2>
-      <div class="carousel">
-        <div class="carousel-track">
-          <img src="logo1.png" alt="Marca 1" />
-          <img src="logo2.png" alt="Marca 2" />
-          <img src="logo3.png" alt="Marca 3" />
-          <img src="logo4.png" alt="Marca 4" />
-          <img src="logo5.png" alt="Marca 5" />
-          <img src="logo6.png" alt="Marca 6" />
-          <img src="logo7.png" alt="Marca 7" />
-          <img src="logo8.png" alt="Marca 8" />
+      <div class="carousel-sets">
+        <div class="logo-set visible">
+          <img src="logo1.png" alt="Logo 1" />
+          <img src="logo2.png" alt="Logo 2" />
+          <img src="logo3.png" alt="Logo 3" />
+        </div>
+        <div class="logo-set">
+          <img src="logo4.png" alt="Logo 4" />
+          <img src="logo5.png" alt="Logo 5" />
+          <img src="logo6.png" alt="Logo 6" />
+        </div>
+        <div class="logo-set">
+          <img src="logo7.png" alt="Logo 7" />
+          <img src="logo8.png" alt="Logo 8" />
+          <img src="logo1.png" alt="Logo 1 repetido" />
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    const sets = document.querySelectorAll('.logo-set');
+    let current = 0;
+
+    setInterval(() => {
+      sets[current].classList.remove('visible');
+      current = (current + 1) % sets.length;
+      sets[current].classList.add('visible');
+    }, 2000);
+  </script>
 </body>
 </html>
